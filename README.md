@@ -1,16 +1,120 @@
-# React + Vite
+ShopFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React-based inventory and order management dashboard built to practice real-world frontend development.
 
-Currently, two official plugins are available:
+ShopFlow allows users to manage products, track inventory, create and edit orders, update order statuses, and configure store settings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features
+Product management
+Add products
+Edit products
+Delete products
+Search products
+Filter products by category
+Track stock levels
+Order management
+Create orders
+Edit orders
+Delete orders
+Update order status
+Filter orders by status
+Automatically update inventory when orders are created, edited, or deleted
+Dashboard
+Total products
+In-stock products
+Low-stock products
+Total orders
+Pending orders
+Completed orders
+Recent orders
+Low-stock product overview
+Store settings
+Store name
+Store email
+Store phone
+Currency selection
+Default order status
+Data persistence
+Settings stored with localStorage
+Product and order state managed with React
+Technologies
+React
+JavaScript
+Vite
+CSS
+HTML
+localStorage
+Git & GitHub
+React Concepts Practiced
 
-## React Compiler
+This project was built to strengthen practical React fundamentals, including:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+useState
+useEffect
+Props
+Component communication
+Controlled forms
+Event handling
+Conditional rendering
+Array methods such as map, filter, find, and reduce
+State updates with the spread operator
+Derived data
+Form validation
+Local storage
+Managing shared state between components
+Inventory Logic
 
-## Expanding the Oxlint configuration
+ShopFlow connects orders with product inventory.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+When an order is created, the ordered quantity is deducted from the corresponding product's stock.
+
+When an order is deleted, the quantity is returned to inventory.
+
+When an order is edited, ShopFlow calculates the difference between the old and new order quantities and updates inventory accordingly.
+
+Changing the product on an existing order also restores the previous product's stock and deducts stock from the new product.
+
+Getting Started
+
+Clone the repository:
+
+git clone https://github.com/cjbasay92/shopflow.git
+
+Navigate into the project:
+
+cd shopflow
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Then open the local URL provided by Vite.
+
+Project Purpose
+
+ShopFlow is a practice project created as part of my frontend development journey.
+
+The goal was to move beyond small isolated React exercises and build a more complete application where multiple parts of the interface share and modify the same data.
+
+The project focuses on understanding React and application logic rather than relying on external UI libraries.
+
+Future Improvements
+
+Possible future improvements include:
+
+Improved form validation
+Better error handling
+Confirmation and feedback messages
+More advanced dashboard analytics
+Persistent product and order data
+Authentication
+Backend API integration
+Author
+
+CJ Basay
+
+Frontend Developer in Progress
